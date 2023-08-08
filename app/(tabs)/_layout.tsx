@@ -1,9 +1,9 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
-
 import Colors from '@/constants/Colors';
 
+import { AntDesign } from '@expo/vector-icons';
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
@@ -21,11 +21,17 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarStyle: {
+          height: 75,
+          paddingBottom: 10,
+          paddingTop: 8,
+
+        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Next Appointment',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
@@ -46,8 +52,15 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Appointments"
+        options={{
+          title: 'Other Appointments',
+          tabBarIcon: ({ color }) => <AntDesign name="calendar" size={24} color={color} />,
         }}
       />
     </Tabs>
