@@ -4,6 +4,7 @@ import { services, beautyBrands } from '@/data/services'
 import { Text, View } from '@/components/Themed';
 import Container from '@/components/Container';
 
+import TenDaysList from '@/utils/TenDaysList'
 
 export default function Appointments() {
   return (
@@ -12,18 +13,7 @@ export default function Appointments() {
       // className='border-b border-gray-300'
       >
         <FlatList
-          data={[
-            { key: "05/08/2023", title: '05 Aug' },
-            { key: "06/08/2023", title: '06 Aug' },
-            { key: "07/08/2023", title: 'Yesterday' },
-            { key: "08/08/2023", title: 'Today' },
-            { key: "09/08/2023", title: 'Tommorow' },
-            { key: "10/08/2023", title: '10 Aug' },
-            { key: "11/08/2023", title: '11 Aug' },
-            { key: "12/08/2023", title: '12 Aug' },
-            { key: "13/08/2023", title: '13 Aug' },
-            { key: "14/08/2023", title: '14 Aug' },
-          ]}
+          data={TenDaysList}
           renderItem={({ item }) => {
             return (
               <TouchableOpacity className='mr-3 py-2 px-4 border border-gray-400 rounded-2xl'>

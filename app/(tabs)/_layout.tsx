@@ -32,7 +32,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Next Appointment',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="plussquareo" size={24} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
