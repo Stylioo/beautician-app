@@ -50,17 +50,17 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="Appointments"
         options={{
           title: 'Other Appointments',
           tabBarIcon: ({ color }) => <AntDesign name="calendar" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
         }}
       />
     </Tabs>
