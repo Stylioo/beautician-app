@@ -47,11 +47,12 @@ export default function SignIn() {
                         <Link className='text-[16px] font-semibold text-right text-red-600' href='/'>Forgot Password?</Link>
                     </View>
                     <View>
-                        <TouchableOpacity
-                            className='w-full h-[50px]  px-4 border justify-center items-center border-gray-300 bg-red-600 rounded-md'
+                        <Link
+                            className='w-full h-[50px]  px-4 border justify-center items-center border-gray-300 text-center pt-2 bg-red-600 rounded-md'
+                            href='/'
                         >
                             <Text className='text-center text-lg font-semibold text-white'>Sign In</Text>
-                        </TouchableOpacity>
+                        </Link>
                     </View>
                 </View>
             </View>
